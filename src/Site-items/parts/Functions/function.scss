@@ -1,0 +1,26 @@
+@import "../../../SassGlobal/abstracts/variables";
+
+.function{
+  background-image: linear-gradient(to right bottom, rgba($color-green-light,.8), rgba($color-green-dark, .8)), url("../../../starter/img/nat-4.jpg");
+  height: 95vh;
+  transform: skewY(-5deg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  margin-top: -10rem;
+  padding: 20rem 0;
+
+  &__cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & > *{
+    transform: skewY(5deg) translate(-45%, -50%);
+  }
+}
+
+
+
