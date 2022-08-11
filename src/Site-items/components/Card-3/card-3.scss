@@ -1,5 +1,8 @@
 @import "../../../SassGlobal/abstracts/variables";
 @import "../../../SassGlobal/abstracts/mixins";
+@import "../../../SassGlobal/abstracts/functions";
+@import "../../../SassGlobal/base/animation";
+
 .card3{
   width: 75%;
   margin: 0 auto;
@@ -12,8 +15,19 @@
   text-align: left;
   font-size: $default-font-size;
 
+  @include respond(tab-port){
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+    transform: skewX(0);
+
+  }
+
   & > *{
     transform: skewX(12deg);
+    @include respond(tab-port){
+      transform: skewX(0);
+    }
   }
   &__shape{
     width: 15rem;
@@ -24,6 +38,9 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @include respond(tab-port){
+      transform: translateX(-3rem) skewX(0);    }
   }
 
   &__caption{

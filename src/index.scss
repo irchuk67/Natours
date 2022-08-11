@@ -1,7 +1,7 @@
-@import "src/SassGlobal/abstracts/variables";
-@import "src/SassGlobal/abstracts/mixins";
-@import "src/SassGlobal/abstracts/functions";
-@import "src/SassGlobal/base/animation";
+@import "SassGlobal/abstracts/variables";
+@import "SassGlobal/abstracts/mixins";
+@import "SassGlobal/abstracts/functions";
+@import "SassGlobal/base/animation";
 
 
 *,
@@ -19,8 +19,12 @@ html{
     font-size: 56.25%;  //9px=1rem; 9/16=56.25%
   }
 
+  @include respond(tab-small){
+    font-size: 50%;  //8px=1rem; 8/16=50%
+  }
+
   @include respond(tab-port){
-    font-size: 50%; //8px=1rem; 8/16=50%
+    font-size: 43.75%; //7px=1rem; 7/16=43.75%
   }
 
   @include respond(big-desktop){
@@ -37,4 +41,13 @@ body{
 
   box-sizing: border-box;
 
+  @include respond(tab-port){
+    padding: 0;
+  }
+
+}
+
+::selection{
+  background-color: $color-green-medium;
+  color: $color-white;
 }

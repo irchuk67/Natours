@@ -7,8 +7,8 @@ class Function extends Component {
 
     render() {
         return(
-            <section className={'function'}>
-                <div className="row function__cards">
+            <section className={'section-function'} id={'section-functions'}>
+                <div className="row section-function__cards">
                     <div className="col-1-of-4">
                         <Card imageSource={<i className="cards__img bi bi-signpost-split" style={{width: 15}}></i>}
                               cardHeader={'Explore the world'}

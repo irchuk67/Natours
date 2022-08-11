@@ -1,29 +1,45 @@
-@import "src/SassGlobal/abstracts/variables";
+@import "../../../SassGlobal/abstracts/variables";
+@import "../../../SassGlobal/abstracts/mixins";
+@import "../../../SassGlobal/abstracts/functions";
+@import "../../../SassGlobal/base/animation";
 
 .section-about{
-  background-color: $color-gray-light;
+  background-color: $color-grey-light;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include respond(tab-port){
+    padding: 20rem 0;
+  }
 }
 
 .u-center-text{
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-top-large{
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .u-margin-bottom-large{
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port){
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-bottom-middle{
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port){
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-bottom-small{
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
+
 }
 
 .heading-secondary{
@@ -36,8 +52,15 @@
   letter-spacing: .2rem;
   color: transparent;
 
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+  @include respond(phone){
+    font-size: 2.5rem;
+  }
+
   &:hover{
-    transform: skewY(-2deg) skewX(15deg) scale(1.1) ;
+    transform: skewY(2deg) skewX(15deg) scale(1.1) ;
     text-shadow: -.5rem 1rem 2rem rgba($color-black, .2);
   }
 }
@@ -46,6 +69,8 @@
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include respond(tab-port)
 }
 
 .paragraph{
@@ -58,32 +83,79 @@
 
 .composition{
   position: relative;
+
   &__photo{
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: 2px;
     position: absolute;
     z-index: 10;
     transition: all .2s;
     outline-offset: 2rem;
 
+    @include respond(tab-land){
+      width: 40%;
+    }
+
+    @include respond(tab-port){
+      float: left;
+      position: relative;
+      width: 33.33333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+
+    }
+
+
     &--p1{
       left: 0;
       top: -2rem;
+
+      @include respond(tab-land){
+        top: -.5rem;
+      }
+
+      @include respond(tab-port){
+        top: 0;
+        transform: scale(1.2);
+      }
     }
 
     &--p2{
       right: 0;
       top: 2rem;
+
+
+      @include respond(tab-land){
+        right: 15rem;
+      }
+
+      @include respond(tab-port){
+        top: -1rem;
+        right: 0;
+        transform: scale(1.3);
+        z-index: 50;
+      }
+
     }
 
     &--p3{
       top: 10rem;
       left: 20%;
+
+    /*  @include respond(tab-land){
+        top: 15rem;
+      }*/
+
+      @include respond(tab-port){
+        top: 1rem;
+        left: 0;
+        transform: scale(1.1);
+      }
     }
 
     &:hover{
       outline: 1.5rem solid $color-green-medium;
-      transform: scale(1.05) translateY(-0.2rem) ;
+      transform: scale(1.05) translateY(-0.5rem) ;
       box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
       z-index: 20;
     }

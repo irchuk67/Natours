@@ -9,7 +9,7 @@ import Button from "../../components/button/button";
 
 const Stories = () => {
   return(
-      <section className={'stories'}>
+      <section className={'section-stories'} id={'section-stories'}>
           <div className="bg-video">
               <video className="bg-video__content" autoPlay muted loop>
                  <source src={videomp4} type={'video/mp4'}/>

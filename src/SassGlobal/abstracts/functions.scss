@@ -1,0 +1,10 @@
+@import "variables";
+
+@function col-width-calc($gapNumber, $numberOfCols, $numberOfColsThatThisPlace, $numberOfGapsThatAreIncluded){
+  @return calc(
+          (#{$numberOfColsThatThisPlace}*(100%
+          - #{$gapNumber}*#{$gutter-horizontal})
+          /#{$numberOfCols})
+          + (#{$numberOfGapsThatAreIncluded})
+          *#{$gutter-horizontal})
+}

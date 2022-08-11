@@ -1,18 +1,31 @@
 @import "../../../SassGlobal/abstracts/variables";
+@import "../../../SassGlobal/abstracts/mixins";
+@import "../../../SassGlobal/abstracts/functions";
+@import "../../../SassGlobal/base/animation";
 
 .cards{
   background-color: rgba($color-white, .8);
-  border-radius: 5px;
-  padding: 3rem;
+  border-radius: 3px;
+  padding: 2.5rem;
   text-decoration: none;
   text-align: center;
   font-size: 1.5rem;
   transition: all .4s;
+
+  @include respond(tab-port){
+    padding: 2rem;
+  }
+
   &__img{
     font-size: 6rem;
+    margin-bottom: .5rem;
     background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tab-port){
+      margin-bottom: 0;
+    }
   }
 
   &:hover{

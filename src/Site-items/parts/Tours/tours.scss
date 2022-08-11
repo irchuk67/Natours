@@ -1,6 +1,15 @@
-.tours{
+@import "../../../SassGlobal/abstracts/variables";
+@import "../../../SassGlobal/abstracts/mixins";
+@import "../../../SassGlobal/abstracts/functions";
+@import "../../../SassGlobal/base/animation";
+
+.section-tours{
   margin-top: -5rem;
   text-align: center;
-  padding: 20rem 0 15rem 0;
+  padding: 25rem 0 15rem 0;
+  background-color: $color-grey-light;
 
+  @include respond(tab-port){
+    padding: 20rem 0 10rem 0;
+  }
 }

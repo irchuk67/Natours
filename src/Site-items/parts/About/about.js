@@ -1,14 +1,18 @@
 import React, {Component} from "react";
-import nat1 from '../../starter/img/nat-1-large.jpg';
-import nat2 from '../../starter/img/nat-2-large.jpg';
-import nat3 from '../../starter/img/nat-3-large.jpg';
+import nat1 from '../../../starter/img/nat-1-large.jpg';
+import nat1Small from '../../../starter/img/nat-1.jpg';
+import nat2Small from '../../../starter/img/nat-2.jpg';
+import nat2 from '../../../starter/img/nat-2-large.jpg';
+import nat3Small from '../../../starter/img/nat-3.jpg';
+import nat3 from '../../../starter/img/nat-3-large.jpg';
 import './about.scss'
-import Button from "../components/button/button";
+import Button from "../../components/button/button";
 
 export default class About extends Component{
     render() {
         return(
-            <section className="section-about">
+            <section className="section-about" id={'section-about'}>
+
                 <div className="u-center-text u-margin-bottom-large">
                     <h2 className="heading-secondary">
                         Exciting tours for adventure people
@@ -36,9 +40,18 @@ export default class About extends Component{
                     </div>
                     <div className="col-1-of-2">
                         <div className="composition">
-                            <img src={nat1} alt="Photo 1" className="composition__photo composition__photo--p1"/>
-                            <img src={nat2} alt="Photo 2" className="composition__photo composition__photo--p2"/>
-                            <img src={nat3} alt="Photo 3" className="composition__photo composition__photo--p3"/>
+                            <img srcSet={`${nat1Small} 300w, ${nat1} 1000w`}
+                                 sizes={'(max-width: 65.25em) 20vw, (max-width: 37.5em) 30vw, 300px'}
+                                 alt="Photo 1"
+                                 className="composition__photo composition__photo--p1"/>
+                            <img srcSet={`${nat2Small} 300w, ${nat2} 1000w`}
+                                 sizes={'(max-width: 65.25em) 20vw, (max-width: 37.5em) 30vw, 300px'}
+                                 alt="Photo 2"
+                                 className="composition__photo composition__photo--p2"/>
+                            <img srcSet={`${nat3Small} 300w, ${nat3} 1000w`}
+                                 sizes={'(max-width: 65.25em) 20vw, (max-width: 37.5em) 30vw, 300px'}
+                                 alt="Photo 3"
+                                 className="composition__photo composition__photo--p3"/>
                         </div>
                     </div>
                 </div>

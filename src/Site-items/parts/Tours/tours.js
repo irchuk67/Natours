@@ -5,7 +5,7 @@ import Button from "../../components/button/button";
 
 const Tours = () => {
     return(
-        <section className={'tours'}>
+        <section className={'section-tours'} id={'section-tours'}>
             <h2 className="heading-secondary tours__heading u-margin-bottom-large">Most popular tours</h2>
             <div className="row">
                 <div className="col-1-of-3">

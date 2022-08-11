@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import './rotating-card.scss'
 import Button from "../button/button";
 
@@ -36,7 +36,7 @@ const RotatingCard = ({imgNumber, heading, cardDetails, color, price}) => {
                     </span>
                     </div>
 
-                    <Button classN={'btn btn--white card__side--back-content-button'}>
+                    <Button classN={'btn btn--white card__side--back-content-button'} Href={'#popup'}>
                         Book now!
                     </Button>
                 </div>
